@@ -551,6 +551,7 @@
 
     <script>
         const API_BASE = 'http://134.199.214.141';
+        const BADGE_API_BASE = 'http://localhost:3001';
         
         let allPosts = [];
         let allCommunities = [];
@@ -791,7 +792,7 @@
             try {
                 container.innerHTML = '<div style="text-align: center; padding: 20px; color: #666;">🏆 Loading leaderboard...</div>';
                 
-                const response = await fetch('/api/badges/leaderboard');
+                const response = await fetch(`${BADGE_API_BASE}/api/badges/leaderboard`);
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}`);
                 }
@@ -828,7 +829,7 @@
             
             try {
                 // Fetch leaderboard data to get real users with badges and karma
-                const response = await fetch('/api/badges/leaderboard');
+                const response = await fetch(`${BADGE_API_BASE}/api/badges/leaderboard`);
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}`);
                 }
@@ -847,7 +848,7 @@
                 for (const researcher of researchers) {
                     try {
                         // Fetch detailed badge data for each researcher
-                        const badgeResponse = await fetch(`/api/badges/user/${researcher.username}`);
+                        const badgeResponse = await fetch(`${BADGE_API_BASE}/api/badges/user/${researcher.username}`);
                         const badgeData = badgeResponse.ok ? await badgeResponse.json() : { badges: [] };
                         const userBadges = badgeData.badges || [];
                         

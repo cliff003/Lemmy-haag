@@ -190,25 +190,25 @@ app.get('/api/badges/leaderboard', async (req, res) => {
     try {
         const result = await pool.query(`
             SELECT 
-                uk.username,
+                p.name as username,
                 p.display_name,
                 COALESCE(uk.total_karma, 0) as total_karma,
                 COALESCE(uk.post_upvotes, 0) as post_upvotes,
                 COALESCE(uk.comment_upvotes, 0) as comment_upvotes,
                 COALESCE(uk.badge_bonus, 0) as badge_bonus,
-                COUNT(ub.badge_id) as badge_count,
-                COUNT(CASE WHEN b.category = 'research' THEN 1 END) as research_badges,
-                COUNT(CASE WHEN b.category = 'community' THEN 1 END) as community_badges,
-                COUNT(CASE WHEN b.category = 'technology' THEN 1 END) as technology_badges,
-                COUNT(CASE WHEN b.category = 'admin' THEN 1 END) as admin_badges
-            FROM user_karma uk
-            JOIN person p ON uk.person_id = p.id
-            LEFT JOIN user_badge ub ON p.id = ub.person_id AND ub.visible = true
+                COUNT(DISTINCT ub.badge_id) as badge_count,
+                COUNT(DISTINCT CASE WHEN b.category = 'research' THEN ub.badge_id END) as research_badges,
+                COUNT(DISTINCT CASE WHEN b.category = 'community' THEN ub.badge_id END) as community_badges,
+                COUNT(DISTINCT CASE WHEN b.category = 'technology' THEN ub.badge_id END) as technology_badges,
+                COUNT(DISTINCT CASE WHEN b.category = 'admin' THEN ub.badge_id END) as admin_badges
+            FROM person p
+            LEFT JOIN user_karma uk ON p.name = uk.username
+            LEFT JOIN user_badge ub ON p.id = ub.person_id
             LEFT JOIN badge b ON ub.badge_id = b.id AND b.active = true
-            WHERE uk.total_karma > 0
-            GROUP BY uk.person_id, uk.username, p.display_name, uk.total_karma, 
+            WHERE COALESCE(uk.total_karma, 0) > 0
+            GROUP BY p.id, p.name, p.display_name, uk.total_karma, 
                      uk.post_upvotes, uk.comment_upvotes, uk.badge_bonus
-            ORDER BY uk.total_karma DESC, badge_count DESC
+            ORDER BY COALESCE(uk.total_karma, 0) DESC, badge_count DESC
             LIMIT 20
         `);
         

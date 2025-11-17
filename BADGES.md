@@ -40,47 +40,47 @@
 
 ### User: dima
 **Specialization**: Research Progress Tracking  
-**Level**: Expert | **Points**: 650 | **Posts**: 0
+**Level**: Expert | **Points**: 310 | **Posts**: 0
 
 **Badges**:
 - 🔬 Research Pioneer (150 pts)
-- 📈 Progress Tracker (150 pts)
-- 📊 Data Analyst (150 pts)
-- 🎓 Mentor (200 pts)
+- 📊 Data Analyst (80 pts)
+- 📈 Progress Tracker (40 pts)
+- 🎓 Mentor (40 pts)
 
 ---
 
 ### User: leyang
 **Specialization**: Gamification & Engagement  
-**Level**: Expert | **Points**: 700 | **Posts**: 0
+**Level**: Expert | **Points**: 320 | **Posts**: 0
 
 **Badges**:
-- 🎮 Gamification Expert (200 pts)
-- 💡 Tech Innovator (150 pts)
-- 🤝 Community Builder (150 pts)
-- 🤖 ML Specialist (200 pts)
+- 💡 Tech Innovator (100 pts)
+- 🤖 ML Specialist (100 pts)
+- 🤝 Community Builder (60 pts)
+- 🎮 Gamification Expert (60 pts)
 
 ---
 
 ### User: jamesthesnake
 **Specialization**: Conservation Technology & Administration  
-**Level**: Admin | **Points**: 1200 | **Posts**: 0
+**Level**: Admin | **Points**: 950 | **Posts**: 0
 
 **Badges**:
-- 🔬 Research Pioneer (150 pts)
-- 💡 Tech Innovator (150 pts)
-- 🦋 Conservation Hero (250 pts)
-- 🌲 Field Expert (150 pts)
 - 👑 HAAG Admin (500 pts)
+- 🔬 Research Pioneer (150 pts)
+- 🦋 Conservation Hero (120 pts)
+- 💡 Tech Innovator (100 pts)
+- 🌲 Field Expert (80 pts)
 
 ---
 
 ### User: charlie
 **Specialization**: PhD Student - Gator Research  
-**Level**: PhD Student | **Points**: 650 | **Posts**: 0
+**Level**: PhD Student | **Points**: 350 | **Posts**: 0
 
 **Badges**:
-- 🐊 PhD Student (500 pts)
+- 🐊 PhD Student (200 pts)
 - 🔬 Research Pioneer (150 pts)
 
 ---
@@ -156,25 +156,25 @@ Each badge has its own point value based on difficulty and prestige:
 
 ### Badge Point Values:
 - **HAAG Admin**: 500 points (highest prestige)
-- **PhD Student**: 500 points (highest prestige)
-- **Conservation Hero**: 250 points
-- **ML Specialist**: 200 points
-- **Gamification Expert**: 200 points
-- **Mentor**: 200 points
+- **PhD Student**: 200 points
 - **Research Pioneer**: 150 points
-- **Data Analyst**: 150 points
-- **Field Expert**: 150 points
-- **Progress Tracker**: 150 points
-- **Tech Innovator**: 150 points
-- **Community Builder**: 150 points
+- **Conservation Hero**: 120 points
+- **ML Specialist**: 100 points
+- **Tech Innovator**: 100 points
+- **Field Expert**: 80 points
+- **Data Analyst**: 80 points
+- **Community Builder**: 60 points
+- **Gamification Expert**: 60 points
+- **Mentor**: 40 points
+- **Progress Tracker**: 40 points
 
 ### Example Calculation:
-User with Research Pioneer (150), Data Analyst (150), Mentor (200), plus 15 posts, 100 post upvotes, 50 comment upvotes:
-- Badge points: 150 + 150 + 200 = 500
+User with Research Pioneer (150), Data Analyst (80), Mentor (40), plus 15 posts, 100 post upvotes, 50 comment upvotes:
+- Badge points: 150 + 80 + 40 = 270
 - Post bonus: 15 × 50 = 750
 - Post upvotes: 100
 - Comment upvotes: 50  
-- **Total karma: 1400**
+- **Total karma: 1170**
 
 The karma view (`user_karma`) updates automatically when users receive upvotes or earn badges.
 

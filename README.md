@@ -11,7 +11,7 @@ HAAG (Herpetology and Amphibian Action Group) is a customized Lemmy instance tha
 ### 🏆 Gamification & Badge System
 - **12 Active Badges**: Research Pioneer, Data Analyst, Field Expert, Progress Tracker, Tech Innovator, ML Specialist, Gamification Expert, Community Builder, Mentor, Conservation Hero, HAAG Admin, PhD Student
 - **Badge Categories**: Research (4), Technology (3), Community (2), Special (1), Admin (1), Academic (1)
-- **Karma Tracking**: Real-time calculation: Post Upvotes + Comment Upvotes + Sum(Badge Points)
+- **Karma Tracking**: Real-time calculation: Sum(Badge Points) + (Post Count × 50) + Post Upvotes + Comment Upvotes
 - **Leaderboard**: Live rankings based on total karma and achievements
 - **Progress Tracking**: Visual indicators for badge progress and completion status
 
@@ -177,9 +177,9 @@ The badge system uses PostgreSQL 17 with custom tables and views:
   - Used by: Badge API for user badge queries
 
 - **`user_karma`** - Aggregated karma calculation view
-  - Formula: `total_karma = post_upvotes + comment_upvotes + sum(badge.points)`
-  - Badge points range from 100 (PhD Student) to 500 (HAAG Admin)
-  - Returns: username, display_name, post_upvotes, comment_upvotes, badge_bonus, total_karma
+  - Formula: `total_karma = sum(badge.points) + (post_count × 50) + post_upvotes + comment_upvotes`
+  - Badge points range from 40 (Mentor, Progress Tracker) to 500 (HAAG Admin)
+  - Returns: username, display_name, post_count, comment_count, post_upvotes, comment_upvotes, badge_bonus, total_karma
   - Automatically updates when posts/comments/badges change
 
 ### Database Management

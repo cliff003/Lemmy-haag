@@ -2,6 +2,33 @@
 
 A gamified research collaboration platform built on Lemmy, designed for conservation technology researchers, wildlife biologists, and conservation scientists.
 
+## Recent Updates (November 2025)
+
+### Badge System Implementation
+- ✅ **Complete Badge Infrastructure**: Created PostgreSQL schema with `badge`, `user_badge`, `user_badge_details`, and `user_karma` views
+- ✅ **12 Active Badges**: Implemented weighted point system (40-500 points) across 6 categories
+- ✅ **Badge API**: REST API on port 3001 with endpoints for badges, user profiles, karma calculation, and leaderboards
+- ✅ **Frontend Integration**: Added badge displays to custom frontend with live leaderboard and user profile badges
+- ✅ **Example Users**: Created 4 demo users (dima, leyang, jamesthesnake, charlie) with assigned badges
+- ✅ **Karma Formula**: `Total Karma = Sum(Badge Points) + (Post Count × 50) + Post Upvotes + Comment Upvotes`
+
+### Badge Point Values
+Redesigned badge point system to reflect difficulty and prestige:
+- **HAAG Admin**: 500 points (platform administrator)
+- **PhD Student**: 200 points (verified doctoral student)
+- **Research Pioneer**: 150 points (5+ research discussions)
+- **Conservation Hero**: 120 points (significant conservation impact)
+- **ML Specialist, Tech Innovator**: 100 points each
+- **Data Analyst, Field Expert**: 80 points each
+- **Community Builder, Gamification Expert**: 60 points each
+- **Mentor, Progress Tracker**: 40 points each
+
+### Database Schema
+- Created automated badge tracking system
+- Implemented real-time karma calculation views
+- Added foreign key relationships between users and badges
+- Included progress tracking and award timestamps
+
 ## Overview
 
 HAAG (Herpetology and Amphibian Action Group) is a customized Lemmy instance that adds gamification, badge systems, and enhanced user profiles to foster scientific collaboration in conservation technology. The platform features multiple frontend options and a comprehensive achievement system to encourage community engagement.

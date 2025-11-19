@@ -6,7 +6,7 @@ A gamified research collaboration platform built on Lemmy, designed for conserva
 
 ### Badge System Implementation
 - ✅ **Complete Badge Infrastructure**: Created PostgreSQL schema with `badge`, `user_badge`, `user_badge_details`, and `user_karma` views
-- ✅ **12 Active Badges**: Implemented weighted point system (40-500 points) across 6 categories
+- ✅ **30 Active Badges**: Implemented weighted point system (20-600 points) across 6 categories
 - ✅ **Badge API**: REST API on port 3001 with endpoints for badges, user profiles, karma calculation, and leaderboards
 - ✅ **Frontend Integration**: Added badge displays to custom frontend with live leaderboard and user profile badges
 - ✅ **Example Users**: Created 4 demo users (dima, leyang, jamesthesnake, charlie) with assigned badges
@@ -14,14 +14,19 @@ A gamified research collaboration platform built on Lemmy, designed for conserva
 
 ### Badge Point Values
 Redesigned badge point system to reflect difficulty and prestige:
-- **HAAG Admin**: 500 points (platform administrator)
-- **PhD Student**: 200 points (verified doctoral student)
-- **Research Pioneer**: 150 points (5+ research discussions)
-- **Conservation Hero**: 120 points (significant conservation impact)
-- **ML Specialist, Tech Innovator**: 100 points each
-- **Data Analyst, Field Expert**: 80 points each
-- **Community Builder, Gamification Expert**: 60 points each
-- **Mentor, Progress Tracker**: 40 points each
+- **Curriculum Director (Lvl IV)**: 600 points
+- **HAAG Admin, Research Pillar (Lvl IV)**: 500 points
+- **Session Chair (Lvl III)**: 300 points
+- **Yearling (Lvl III), Prolific Debater (Lvl III)**: 250 points
+- **PhD Student**: 200 points
+- **Research Pioneer**: 150 points
+- **Conservation Hero, Presenter (Lvl II)**: 120 points
+- **Semester Survivor (Lvl II), Active Voice (Lvl II), Code Artisan**: 100 points
+- **Data Analyst, Field Expert**: 80 points
+- **Community Builder, Gamification Expert**: 60 points
+- **CS8903/CS6999 Researcher**: 50 points
+- **Mentor, Progress Tracker**: 40 points
+- **New Recruit (Lvl I)**: 20 points
 
 ### Database Schema
 - Created automated badge tracking system
@@ -36,8 +41,8 @@ HAAG (Herpetology and Amphibian Action Group) is a customized Lemmy instance tha
 ## Features
 
 ### 🏆 Gamification & Badge System
-- **12 Active Badges**: Research Pioneer, Data Analyst, Field Expert, Progress Tracker, Tech Innovator, ML Specialist, Gamification Expert, Community Builder, Mentor, Conservation Hero, HAAG Admin, PhD Student
-- **Badge Categories**: Research (4), Technology (3), Community (2), Special (1), Admin (1), Academic (1)
+- **30 Active Badges**: Including tiered progression for Research (Lvl I-IV) and Community (Lvl I-IV) engagement.
+- **Badge Categories**: Research (12), Technology (6), Community (6), Special (2), Admin (1), Academic (3)
 - **Karma Tracking**: Real-time calculation: Sum(Badge Points) + (Post Count × 50) + Post Upvotes + Comment Upvotes
 - **Leaderboard**: Live rankings based on total karma and achievements
 - **Progress Tracking**: Visual indicators for badge progress and completion status
@@ -157,7 +162,7 @@ The Badge API runs on port 3001 and provides real-time badge and karma data:
 
 ### Available Endpoints
 - `GET /health` - API health check (returns status and timestamp)
-- `GET /api/badges` - Get all 12 available badges with icons, colors, and categories
+- `GET /api/badges` - Get all 30 available badges with icons, colors, and categories
 - `GET /api/badges/user/:username` - Get earned badges for a specific user
 - `GET /api/badges/stats/:username` - Get badge statistics by category
 - `GET /api/badges/karma/:username` - Get karma breakdown (posts, comments, badges)
@@ -180,15 +185,10 @@ The Badge API runs on port 3001 and provides real-time badge and karma data:
 ## Database Schema
 
 ### Database Setup
-The badge system uses PostgreSQL 17 with custom tables and views:
-
-**Initial Setup Scripts:**
-1. `init-badge-schema.sql` - Creates tables, views, indexes, and triggers
-2. `seed-badge-data.sql` - Populates 12 default badges (already loaded)
-3. `award-initial-badges.sql` - Awards badges to founding members (run after user creation)
+The badge system uses PostgreSQL 17 with custom tables and views. The database schema includes:
 
 ### Custom Tables
-- **`badge`** - Badge definitions with 12 active badges
+- **`badge`** - Badge definitions with 30 active badges
   - Columns: id, name, description, icon (emoji), color (hex), category, criteria, points, active, created, updated
   - Indexes: category, active status
   - Constraint: unique badge names
@@ -205,7 +205,7 @@ The badge system uses PostgreSQL 17 with custom tables and views:
 
 - **`user_karma`** - Aggregated karma calculation view
   - Formula: `total_karma = sum(badge.points) + (post_count × 50) + post_upvotes + comment_upvotes`
-  - Badge points range from 40 (Mentor, Progress Tracker) to 500 (HAAG Admin)
+  - Badge points range from 20 (New Recruit) to 600 (Curriculum Director)
   - Returns: username, display_name, post_count, comment_count, post_upvotes, comment_upvotes, badge_bonus, total_karma
   - Automatically updates when posts/comments/badges change
 

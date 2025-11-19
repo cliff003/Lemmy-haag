@@ -2,39 +2,61 @@
 
 ## Available Badges
 
-**12 Total Badges** across 4 main categories:
+**30 Total Badges** across 6 main categories:
+
+### Academic Badges
+| Badge | Icon | Color | Points | Description | Origin |
+|---|---|---|---|---|---|
+| **CS8903 Researcher** | 🎓 | #2980b9 | 50 | Researcher enrolled in CS8903 Special Problems. | New |
+| **CS6999 Researcher** | 🎯 | #f1c40f | 50 | Researcher enrolled in CS6999 Master's Project. | New |
+| **Volunteer Researcher** | 🤲 | #1abc9c | 50 | Researcher contributing without course credit. | New |
 
 ### Research Badges
-| Badge | Icon | Color | Description |
-|-------|------|-------|-------------|
-| **Research Pioneer** | 🔬 | Green (#2c7a3f) | Started 5+ research discussions |
-| **Data Analyst** | 📊 | Blue (#3498db) | Posted 10+ data analysis insights |
-| **Field Expert** | 🌲 | Green (#27ae60) | Shared field research experiences |
-| **Progress Tracker** | 📈 | Orange (#ff6b35) | Research progress tracking specialist |
+| Badge | Icon | Color | Points | Description | Origin |
+|---|---|---|---|---|---|
+| **Contributor (Lvl I)** | 🗣️ | #a5d6a7 | 40 | Posted 10+ research contributions. | New |
+| **Active Voice (Lvl II)** | 📢 | #66bb6a | 100 | Posted 30+ research contributions. | New |
+| **Prolific Debater (Lvl III)** | 🗯️ | #43a047 | 250 | Posted 75+ research contributions. | New |
+| **Research Pillar (Lvl IV)** | 🏛️ | #1b5e20 | 500 | Posted 150+ research contributions. | New |
+| **Reader (Lvl I)** | 👓 | #e1bee7 | 40 | Participated in 3 paper discussions. | New |
+| **Presenter (Lvl II)** | 🎙️ | #ab47bc | 120 | Presented a paper to the club. | New |
+| **Session Chair (Lvl III)** | ⚖️ | #8e24aa | 300 | Led or moderated 3+ paper sessions. | New |
+| **Curriculum Director (Lvl IV)** | 📚 | #4a148c | 600 | Organized full semester paper schedule. | New |
+| **Research Pioneer** | 🔬 | #2c7a3f | 150 | Started 5+ distinct research discussions. | Existing |
+| **Data Analyst** | 📊 | #3498db | 80 | Posted 10+ data analysis insights. | Existing |
+| **Field Expert** | 🌲 | #27ae60 | 80 | Shared significant field research experiences. | Existing |
+| **Progress Tracker** | 📈 | #ff6b35 | 40 | Specialist in tracking research progress. | Existing |
 
 ### Technology Badges
-| Badge | Icon | Color | Description |
-|-------|------|-------|-------------|
-| **Tech Innovator** | 💡 | Orange (#f39c12) | Contributed technology solutions |
-| **ML Specialist** | 🤖 | Purple (#8e44ad) | Machine learning expertise |
-| **Gamification Expert** | 🎮 | Purple (#9b59b6) | Gamification and engagement specialist |
+| Badge | Icon | Color | Points | Description | Origin |
+|---|---|---|---|---|---|
+| **Code Artisan** | ⚒️ | #34495e | 100 | Writes efficient, hand-crafted code (No AI). | New |
+| **Prompt Alchemist** | 🔮 | #9b59b6 | 60 | Mastery of Generative AI prompting. | New |
+| **Vibe Coder** | 🌊 | #00bcd4 | 60 | Rapid prototyping using AI tools (Flow State). | New |
+| **Tech Innovator** | 💡 | #f39c12 | 100 | Contributed novel technology solutions. | Existing |
+| **ML Specialist** | 🤖 | #8e44ad | 100 | Demonstrated machine learning expertise. | Existing |
+| **Gamification Expert** | 🎮 | #9b59b6 | 60 | Specialist in engagement and gamification. | Existing |
 
 ### Community Badges
-| Badge | Icon | Color | Description |
-|-------|------|-------|-------------|
-| **Community Builder** | 🤝 | Red (#e74c3c) | Active in 5+ communities |
-| **Mentor** | 🎓 | Dark Gray (#34495e) | Helped 20+ researchers |
+| Badge | Icon | Color | Points | Description | Origin |
+|---|---|---|---|---|---|
+| **New Recruit (Lvl I)** | 🌱 | #b2dfdb | 20 | Active member for > 1 month. | New |
+| **Semester Survivor (Lvl II)** | ⚓ | #4db6ac | 100 | Active member for > 1 semester (4 months). | New |
+| **Yearling (Lvl III)** | 📆 | #009688 | 250 | Active member for > 1 year. | New |
+| **HAAG Legacy (Lvl IV)** | 🦕 | #004d40 | 500 | Active member for > 2 years. | New |
+| **Community Builder** | 🤝 | #e74c3c | 60 | Active participant in 5+ sub-communities. | Existing |
+| **Mentor** | 🎓 | #34495e | 40 | Helped 20+ researchers with queries. | Existing |
 
 ### Special Badges
-| Badge | Icon | Color | Description |
-|-------|------|-------|-------------|
-| **Conservation Hero** | 🦋 | Teal (#1abc9c) | Made significant conservation impact |
+| Badge | Icon | Color | Points | Description | Origin |
+|---|---|---|---|---|---|
+| **PhD Student** | 🐊 | #FF6B00 | 200 | Verified doctoral student in conservation/ecology. | Existing |
+| **Conservation Hero** | 🦋 | #1abc9c | 120 | Made significant real-world conservation impact. | Existing |
 
-### Special Badges
-| Badge | Icon | Color | Description |
-|-------|------|-------|-------------|
-| **HAAG Admin** | 👑 | Dark Red (#8B0000) | HAAG platform administrator |
-| **PhD Student** | 🐊 | Orange (#FF6B00) | PhD student in conservation/ecology |
+### Admin Badges
+| Badge | Icon | Color | Points | Description | Origin |
+|---|---|---|---|---|---|
+| **HAAG Admin** | 👑 | #8B0000 | 500 | Administrator of the HAAG platform. | Existing |
 
 ## Current Badge Assignments
 
@@ -82,6 +104,18 @@
 **Badges**:
 - 🐊 PhD Student (200 pts)
 - 🔬 Research Pioneer (150 pts)
+
+---
+
+### User: haag_tester
+**Specialization**: Academic Research  
+**Level**: Intermediate | **Points**: 270 | **Posts**: 0
+
+**Badges**:
+- 🎓 CS8903 Researcher (50 pts)
+- 📢 Active Voice (Lvl II) (100 pts)
+- ⚒️ Code Artisan (100 pts)
+- 🌱 New Recruit (Lvl I) (20 pts)
 
 ---
 
@@ -138,12 +172,12 @@ Badge definitions are also available in JavaScript files for offline viewing:
 ## Badge Categories
 
 The system organizes badges into these categories:
-- **research** - Research contributions and scientific work (4 badges)
-- **community** - Community building and engagement (3 badges)
-- **technology** - Technical contributions and innovations (3 badges)
-- **conservation** - Conservation impact and field work (included in research)
+- **research** - Research contributions and scientific work (12 badges)
+- **technology** - Technical contributions and innovations (6 badges)
+- **community** - Community building and engagement (6 badges)
+- **academic** - Academic achievements (3 badges)
+- **special** - Special recognition (2 badges)
 - **admin** - Platform administration (1 badge)
-- **academic** - Academic achievements (1 badge)
 
 ## Karma System
 
@@ -155,18 +189,19 @@ Total Karma = Sum(Badge Points) + (Post Count × 50) + Post Upvotes + Comment Up
 Each badge has its own point value based on difficulty and prestige:
 
 ### Badge Point Values:
-- **HAAG Admin**: 500 points (highest prestige)
+- **Curriculum Director (Lvl IV)**: 600 points
+- **HAAG Admin**, **HAAG Legacy (Lvl IV)**, **Research Pillar (Lvl IV)**: 500 points
+- **Session Chair (Lvl III)**: 300 points
+- **Yearling (Lvl III)**, **Prolific Debater (Lvl III)**: 250 points
 - **PhD Student**: 200 points
 - **Research Pioneer**: 150 points
-- **Conservation Hero**: 120 points
-- **ML Specialist**: 100 points
-- **Tech Innovator**: 100 points
-- **Field Expert**: 80 points
-- **Data Analyst**: 80 points
-- **Community Builder**: 60 points
-- **Gamification Expert**: 60 points
-- **Mentor**: 40 points
-- **Progress Tracker**: 40 points
+- **Conservation Hero**, **Presenter (Lvl II)**: 120 points
+- **Semester Survivor (Lvl II)**, **Active Voice (Lvl II)**, **Code Artisan**, **Tech Innovator**, **ML Specialist**: 100 points
+- **Data Analyst**, **Field Expert**: 80 points
+- **Community Builder**, **Gamification Expert**, **Prompt Alchemist**, **Vibe Coder**: 60 points
+- **CS8903 Researcher**, **CS6999 Researcher**, **Volunteer Researcher**: 50 points
+- **Mentor**, **Progress Tracker**, **Contributor (Lvl I)**, **Reader (Lvl I)**: 40 points
+- **New Recruit (Lvl I)**: 20 points
 
 ### Example Calculation:
 User with Research Pioneer (150), Data Analyst (80), Mentor (40), plus 15 posts, 100 post upvotes, 50 comment upvotes:

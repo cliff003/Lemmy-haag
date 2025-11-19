@@ -270,60 +270,113 @@
     </div>
     
     <script>
-        // Badge definitions from badge-inline.js
+        // Badge definitions - Full 30 Badge Set
         const badges = {
-            'research-pioneer': { name: 'Research Pioneer', icon: '🔬', color: '#2c7a3f', category: 'Research', description: 'Started 5+ research discussions' },
-            'progress-tracker': { name: 'Progress Tracker', icon: '📈', color: '#ff6b35', category: 'Research', description: 'Research progress tracking specialist' },
-            'gamification-expert': { name: 'Gamification Expert', icon: '🎮', color: '#9b59b6', category: 'Technology', description: 'Gamification and engagement specialist' },
-            'data-analyst': { name: 'Data Analyst', icon: '📊', color: '#3498db', category: 'Research', description: 'Posted 10+ data analysis insights' },
-            'field-expert': { name: 'Field Expert', icon: '🌲', color: '#27ae60', category: 'Research', description: 'Shared field research experiences' },
-            'tech-innovator': { name: 'Tech Innovator', icon: '💡', color: '#f39c12', category: 'Technology', description: 'Contributed technology solutions' },
-            'community-builder': { name: 'Community Builder', icon: '🤝', color: '#e74c3c', category: 'Community', description: 'Active in 5+ communities' },
-            'mentor': { name: 'Mentor', icon: '👨‍🏫', color: '#34495e', category: 'Community', description: 'Helped 20+ researchers' },
-            'conservation-hero': { name: 'Conservation Hero', icon: '🦋', color: '#1abc9c', category: 'Conservation', description: 'Made significant conservation impact' },
-            'ml-specialist': { name: 'ML Specialist', icon: '🤖', color: '#8e44ad', category: 'Technology', description: 'Machine learning expertise' },
-            'haag-admin': { name: 'HAAG Admin', icon: '👑', color: '#8B0000', category: 'Admin', description: 'HAAG platform administrator' },
-            'phd-student-gator': { name: 'PhD Student', icon: '🐊', color: '#FF6B00', category: 'Academic', description: 'PhD student in conservation/ecology' }
+            // ACADEMIC (3)
+            'cs8903-researcher': { name: 'CS8903 Researcher', icon: '🎓', color: '#2980b9', category: 'Academic', description: 'Researcher enrolled in CS8903 Special Problems', points: 50 },
+            'cs6999-researcher': { name: 'CS6999 Researcher', icon: '🎯', color: '#f1c40f', category: 'Academic', description: 'Researcher enrolled in CS6999 Master\'s Project', points: 50 },
+            'volunteer-researcher': { name: 'Volunteer Researcher', icon: '🤲', color: '#1abc9c', category: 'Academic', description: 'Researcher contributing without course credit', points: 50 },
+
+            // RESEARCH (12)
+            'contributor': { name: 'Contributor (Lvl I)', icon: '🗣️', color: '#a5d6a7', category: 'Research', description: 'Posted 10+ research contributions', points: 40 },
+            'active-voice': { name: 'Active Voice (Lvl II)', icon: '📢', color: '#66bb6a', category: 'Research', description: 'Posted 30+ research contributions', points: 100 },
+            'prolific-debater': { name: 'Prolific Debater (Lvl III)', icon: '🗯️', color: '#43a047', category: 'Research', description: 'Posted 75+ research contributions', points: 250 },
+            'research-pillar': { name: 'Research Pillar (Lvl IV)', icon: '🏛️', color: '#1b5e20', category: 'Research', description: 'Posted 150+ research contributions', points: 500 },
+            'reader': { name: 'Reader (Lvl I)', icon: '👓', color: '#e1bee7', category: 'Research', description: 'Participated in 3 paper discussions', points: 40 },
+            'presenter': { name: 'Presenter (Lvl II)', icon: '🎙️', color: '#ab47bc', category: 'Research', description: 'Presented a paper to the club', points: 120 },
+            'session-chair': { name: 'Session Chair (Lvl III)', icon: '⚖️', color: '#8e24aa', category: 'Research', description: 'Led or moderated 3+ paper sessions', points: 300 },
+            'curriculum-director': { name: 'Curriculum Director (Lvl IV)', icon: '📚', color: '#4a148c', category: 'Research', description: 'Organized full semester paper schedule', points: 600 },
+            'research-pioneer': { name: 'Research Pioneer', icon: '🔬', color: '#2c7a3f', category: 'Research', description: 'Started 5+ distinct research discussions', points: 150 },
+            'data-analyst': { name: 'Data Analyst', icon: '📊', color: '#3498db', category: 'Research', description: 'Posted 10+ data analysis insights', points: 80 },
+            'field-expert': { name: 'Field Expert', icon: '🌲', color: '#27ae60', category: 'Research', description: 'Shared significant field research experiences', points: 80 },
+            'progress-tracker': { name: 'Progress Tracker', icon: '📈', color: '#ff6b35', category: 'Research', description: 'Specialist in tracking research progress', points: 40 },
+
+            // TECHNOLOGY (6)
+            'code-artisan': { name: 'Code Artisan', icon: '⚒️', color: '#34495e', category: 'Technology', description: 'Writes efficient, hand-crafted code (No AI)', points: 100 },
+            'prompt-alchemist': { name: 'Prompt Alchemist', icon: '🔮', color: '#9b59b6', category: 'Technology', description: 'Mastery of Generative AI prompting', points: 60 },
+            'vibe-coder': { name: 'Vibe Coder', icon: '🌊', color: '#00bcd4', category: 'Technology', description: 'Rapid prototyping using AI tools (Flow State)', points: 60 },
+            'tech-innovator': { name: 'Tech Innovator', icon: '💡', color: '#f39c12', category: 'Technology', description: 'Contributed novel technology solutions', points: 100 },
+            'ml-specialist': { name: 'ML Specialist', icon: '🤖', color: '#8e44ad', category: 'Technology', description: 'Demonstrated machine learning expertise', points: 100 },
+            'gamification-expert': { name: 'Gamification Expert', icon: '🎮', color: '#9b59b6', category: 'Technology', description: 'Specialist in engagement and gamification', points: 60 },
+
+            // COMMUNITY (6)
+            'new-recruit': { name: 'New Recruit (Lvl I)', icon: '🌱', color: '#b2dfdb', category: 'Community', description: 'Active member for > 1 month', points: 20 },
+            'semester-survivor': { name: 'Semester Survivor (Lvl II)', icon: '⚓', color: '#4db6ac', category: 'Community', description: 'Active member for > 1 semester (4 months)', points: 100 },
+            'yearling': { name: 'Yearling (Lvl III)', icon: '📆', color: '#009688', category: 'Community', description: 'Active member for > 1 year', points: 250 },
+            'haag-legacy': { name: 'HAAG Legacy (Lvl IV)', icon: '🦕', color: '#004d40', category: 'Community', description: 'Active member for > 2 years', points: 500 },
+            'community-builder': { name: 'Community Builder', icon: '🤝', color: '#e74c3c', category: 'Community', description: 'Active participant in 5+ sub-communities', points: 60 },
+            'mentor': { name: 'Mentor', icon: '👨‍🏫', color: '#34495e', category: 'Community', description: 'Helped 20+ researchers with queries', points: 40 },
+
+            // SPECIAL (2)
+            'phd-student': { name: 'PhD Student', icon: '🐊', color: '#FF6B00', category: 'Special', description: 'Verified doctoral student in conservation/ecology', points: 200 },
+            'conservation-hero': { name: 'Conservation Hero', icon: '🦋', color: '#1abc9c', category: 'Special', description: 'Made significant real-world conservation impact', points: 120 },
+
+            // ADMIN (1)
+            'haag-admin': { name: 'HAAG Admin', icon: '👑', color: '#8B0000', category: 'Admin', description: 'Administrator of the HAAG platform', points: 500 }
         };
 
         const userBadges = {
-            'dima': ['research-pioneer', 'progress-tracker', 'data-analyst', 'mentor'],
-            'leyang': ['gamification-expert', 'tech-innovator', 'community-builder', 'ml-specialist'],
-            'jamesthesnake': ['research-pioneer', 'tech-innovator', 'conservation-hero', 'field-expert', 'haag-admin'],
-            'charlie': ['phd-student-gator', 'research-pioneer']
+            'dima': ['research-pioneer', 'data-analyst', 'progress-tracker', 'mentor'],
+            'leyang': ['tech-innovator', 'ml-specialist', 'community-builder', 'gamification-expert'],
+            'jamesthesnake': ['haag-admin', 'research-pioneer', 'conservation-hero', 'tech-innovator', 'field-expert'],
+            'charlie': ['phd-student', 'research-pioneer'],
+            'haag_tester': ['cs8903-researcher', 'active-voice', 'code-artisan', 'new-recruit']
         };
 
         const userSpecializations = {
             'dima': 'Research Progress Tracking',
             'leyang': 'Gamification & Engagement',
             'jamesthesnake': 'Conservation Technology & Administration',
-            'charlie': 'PhD Student - Gator Research'
+            'charlie': 'PhD Student - Gator Research',
+            'haag_tester': 'Academic Research'
         };
 
         const userStats = {
-            'dima': { level: 'Expert', points: 1250, posts: 15 },
-            'leyang': { level: 'Expert', points: 1100, posts: 12 },
+            'dima': { level: 'Expert', points: 310, posts: 15 },
+            'leyang': { level: 'Expert', points: 320, posts: 12 },
             'jamesthesnake': { level: 'Admin', points: 950, posts: 3 },
-            'charlie': { level: 'PhD Student', points: 680, posts: 8 }
+            'charlie': { level: 'PhD Student', points: 350, posts: 8 },
+            'haag_tester': { level: 'Intermediate', points: 270, posts: 35 }
         };
 
         // Render all badges
         function renderBadges() {
             const badgeGrid = document.getElementById('badgeGrid');
             
-            Object.entries(badges).forEach(([id, badge]) => {
-                const card = document.createElement('div');
-                card.className = 'badge-card';
-                card.style.borderColor = badge.color;
-                
-                card.innerHTML = `
-                    <div class="badge-icon">${badge.icon}</div>
-                    <div class="badge-name">${badge.name}</div>
-                    <div class="badge-category">${badge.category}</div>
-                    <div class="badge-description">${badge.description}</div>
-                `;
-                
-                badgeGrid.appendChild(card);
+            // Group badges by category
+            const categories = {};
+            Object.values(badges).forEach(badge => {
+                if (!categories[badge.category]) {
+                    categories[badge.category] = [];
+                }
+                categories[badge.category].push(badge);
+            });
+
+            // Render by category
+            Object.entries(categories).forEach(([category, categoryBadges]) => {
+                const categoryHeader = document.createElement('h3');
+                categoryHeader.style.gridColumn = '1 / -1';
+                categoryHeader.style.color = '#2c7a3f';
+                categoryHeader.style.marginTop = '20px';
+                categoryHeader.style.borderBottom = '2px solid #e8f4ea';
+                categoryHeader.style.paddingBottom = '10px';
+                categoryHeader.textContent = `${category} Badges`;
+                badgeGrid.appendChild(categoryHeader);
+
+                categoryBadges.forEach(badge => {
+                    const card = document.createElement('div');
+                    card.className = 'badge-card';
+                    card.style.borderColor = badge.color;
+                    
+                    card.innerHTML = `
+                        <div class="badge-icon" style="color: ${badge.color}">${badge.icon}</div>
+                        <div class="badge-name">${badge.name}</div>
+                        <div class="badge-category" style="color: ${badge.color}">${badge.points} Points</div>
+                        <div class="badge-description">${badge.description}</div>
+                    `;
+                    
+                    badgeGrid.appendChild(card);
+                });
             });
         }
 
